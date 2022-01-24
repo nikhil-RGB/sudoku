@@ -1,4 +1,7 @@
 # sudoku
+![sudokueg](https://user-images.githubusercontent.com/68727041/150777056-6e80ef24-4553-4970-ab64-d3b235b17434.png)
+
+<br>
 A JAVA GUI application to solve sudoku puzzles using Depth first search
 Let's talk about the way a brute force algorithm would solve a sudoku puzzle.
 <br>
