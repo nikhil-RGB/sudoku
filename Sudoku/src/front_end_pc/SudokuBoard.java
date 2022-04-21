@@ -11,8 +11,8 @@ import main.Board;
 @SuppressWarnings("unused")
 public final class SudokuBoard 
 {
-public static final Border BORD=BorderFactory.createLineBorder(Color.GREEN,3);
-public static final Border NORD=BorderFactory.createLineBorder(Color.CYAN,3);
+public static final Border BORD=new RoundedBorder(6,Color.GREEN);
+public static final Border NORD=new RoundedBorder(6,Color.CYAN);;
 public static final String RULES=
 "<html>Sudoku Solver is a program which is built to solve Sudoku puzzles with a unique solution, and a minimum of 23 filled tiles<br>"
 + "The program works on the basis of a brute force algorithm designed  by individual JAVA dev "
@@ -22,12 +22,11 @@ public static final String RULES=
 + "To clear a particular cell, click on it and tap 0 on the keyboard.<br>"
 + "Once you have filled the board, click on the activate solver option on the menu bar<br>"
 + "to start solving.";
-public static final String URL_CONTACT="bleach.ichigo.anime@gmail.com";
-public static final String URL_DEV="https://bleachichigoanime.wixsite.com/website";
-public static final String WORK_DEV="https://bleachichigoanime.wixsite.com/website/my-work";
+public static final String URL_CONTACT="javakingxi@gmail.com";
+public static final String URL_DEV="https://linktr.ee/nikhil_n67";
+public static final String WORK_DEV="https://github.com/nikhil-RGB";
 private boolean isActive;//Whether input is not be taken or not.True for yes, false for no
 private JPanel glo_holder;//Holds all components in the board
-private JLabel lab;//Label which holds address of current input grid box.
 private static final long serialVersionUID = 556678900654L;//serialVersionUID.
 private Board rep;//representative Board object for this sudoku board.
 private int[] coords;//coords the user wishes to input numbers at
@@ -76,7 +75,7 @@ kr=new KeyAdapter()
 			coords[2]=z;
 			cells[x][y][z].setBorder(BORD);
 			String text=(1+((3*x)+y))+"";
-			lab.setText("Input at: REGION "+text+" CELL "+(1+z));
+		
 		}
 	}
 	public void keyTyped(KeyEvent ke)
@@ -132,7 +131,6 @@ Runnable thr=()->{
    cells[coords[0]][coords[1]][coords[2]].setBorder(NORD);
    cells[x][y][z].setBorder(BORD);
    String text=(1+((3*x)+y))+"";
-   lab.setText("Input at: REGION "+text+" CELL "+(1+z));
    coords=new int[] {x,y,z};
    reader.close();
                    };
@@ -141,9 +139,6 @@ Runnable thr=()->{
   };
 glo_holder=new JPanel(new BorderLayout());
 glo_holder.setBackground(Color.CYAN);
-lab=new JLabel("Input at: REGION 1 CELL 1");
-lab.setFont(new Font("algerian",Font.BOLD,22));
-lab.setBackground(Color.BLUE);
 rep=new Board();
 coords=new int[3];
 cells=new JButton[3][3][9];
@@ -159,7 +154,7 @@ Color flipper=Color.BLACK;
       for(int k=0;k<9;++k)
 	   {
 		   JButton obc=cells[i][j][k]=new JButton();
-		   obc.setFont(new Font("algerian",Font.BOLD,18));
+		   obc.setFont(new Font("SansSerif",Font.BOLD,18));
 		   obc.setActionCommand(i+" "+j+" "+k);
 		   obc.addActionListener(ar);
 		   obc.addKeyListener(kr);
@@ -174,7 +169,6 @@ Color flipper=Color.BLACK;
  cells[0][0][0].setBorder(BORD);
  global_holder.setBackground(Color.BLACK);
  glo_holder.add(global_holder);
- glo_holder.add(lab,BorderLayout.NORTH);
 }
 public SudokuBoard()
 {
@@ -183,8 +177,6 @@ public SudokuBoard()
 //Ends input process,deactivates event listeners
 public int[][][] endInputProcess()
 {
-this.lab.setText("");
-this.lab.setEnabled(false);
 this.isActive=false;
 this.cells[coords[0]][coords[1]][coords[2]].setBorder(NORD);
 this.colourSolutions(Color.GREEN);
