@@ -60,4 +60,4 @@ Provide the user with this board.
 Explore the Sudoku folder to read the source code and download the Sudoku zip file to use the application.<br>
 The application GUI is built with AWT/SWING.
 If you'd like to read the information in this readme in article format with images embedded in the text, 
-[click here](https://www.swingguiking.com/post/an-explanation-of-the-sudoku-solver-s-algorithm)
+[click here](https://theelysianjournal.com/2021/05/15/__trashed-3/)
