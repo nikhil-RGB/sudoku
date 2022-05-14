@@ -1,9 +1,10 @@
 # sudoku
-
+A JAVA GUI application to solve sudoku puzzles using breadth first search!<br>
+<br>
 ![sudokuNEW](https://user-images.githubusercontent.com/68727041/164480337-b834fdb6-9e45-4368-adfc-0f9fcb68fd83.png)
 
 <br>
-A JAVA GUI application to solve sudoku puzzles using breadth first search
+
 Let's talk about the way a brute force algorithm would solve a sudoku puzzle.
 <br>
 Brute Force Algorithm for Solving a Sudoku puzzle:
@@ -60,5 +61,3 @@ Provide the user with this board.
 <br>
 Explore the Sudoku folder to read the source code and download the Sudoku zip file to use the application.<br>
 The application GUI is built with AWT/SWING.
-If you'd like to read the information in this readme in article format with images embedded in the text, 
-[click here](https://theelysianjournal.com/2021/05/15/__trashed-3/)
