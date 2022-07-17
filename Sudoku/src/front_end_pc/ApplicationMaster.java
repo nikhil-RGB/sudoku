@@ -22,13 +22,7 @@ public final class ApplicationMaster {
  {
   public void run()
   {
-  try {
-	Thread.sleep(4000);
-      } 
-  catch (InterruptedException e)
-  {
-   JOptionPane.showMessageDialog(null,"Error in launching app","Oops!",JOptionPane.ERROR_MESSAGE);
-  }
+
   ApplicationMaster apmt=new ApplicationMaster();
   apmt.shouldRun=true;
   apmt.init();
