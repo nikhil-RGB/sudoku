@@ -1,12 +1,18 @@
 # sudoku
-A JAVA GUI application to solve sudoku puzzles using breadth first search!<br>
-<br>
+
 ![sudokuNEW](https://user-images.githubusercontent.com/68727041/164480337-b834fdb6-9e45-4368-adfc-0f9fcb68fd83.png)
 
+### Purpose
+- A JAVA GUI Desktop application to solve sudoku puzzles using optimized breadth first search.<br>
+- Can solve puzzles with >=23 tiles filled.<br>
+- Algorithm fails below 23 filled tiles, as possibilities increase exponentially during calculations which causes extrememly high computational times.<br/>
+
+**Let's talk about the way a brute force algorithm would solve a sudoku puzzle.**
+
 <br>
 
-Let's talk about the way a brute force algorithm would solve a sudoku puzzle.
-<br>
+### Implementation
+
 Brute Force Algorithm for Solving a Sudoku puzzle:
 <br>
 For those readers unfamiliar with the working principle of a sudoku puzzle, here's a well-paced explanation of the Board:
@@ -61,3 +67,7 @@ Provide the user with this board.
 <br>
 Explore the Sudoku folder to read the source code and download the Sudoku zip file to use the application.<br>
 The application GUI is built with AWT/SWING.
+
+### How to Use
+
+Follow instructions in the Release section description.
